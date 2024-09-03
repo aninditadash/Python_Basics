@@ -9,5 +9,5 @@ while choice != 0:
               "3.\tGo swimming\n"
               "4.\tHave dinner\n"
               "5.\tGo to bed\n"
-              "0.\tExit")
+              "0.\tExit\n")
     choice = int(input())

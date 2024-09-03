@@ -51,3 +51,37 @@ nested_lists_sum = [
 print(len(nested_lists_sum))
 for x, y, z in nested_lists_sum:
     print("List item in nested list {} + {} + {} = {}".format(x, y, z, x+y+z))
+
+print("================================================================================")
+
+print("Implementation using tuple")
+recipes_tuple = {
+    "Chicken and chips": [
+        ("chicken", 100),
+        ("potatoes", 3),
+        ("salt", 1),
+        ("malt vinegar", 5),
+    ],
+}
+
+for recipe, ingredients in recipes_tuple.items():
+    print(f"To prepare - {recipe}, we need {ingredients}")
+    for ingredient, quantity in ingredients:
+        print(f"{ingredient} - {quantity}")
+
+print("================================================================================")
+
+print("Implementation using dictionary")
+recipes_dict = {
+    "Chicken and chips": {
+        "chicken": 100,
+        "potatoes": 3,
+        "salt": 1,
+        "malt vinegar": 5,
+    },
+}
+
+for recipe, ingredients in recipes_dict.items():
+    print(f"To prepare - {recipe}, we need {ingredients}")
+    for ingredient, quantity in ingredients.items():
+        print(f"{ingredient} - {quantity}")
