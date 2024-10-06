@@ -1,5 +1,6 @@
-# Binary Search algorithm is - most efficient way of finding an item in an ordered list
-# Guessing game using Binary Search algorithm (Hi Lo Game)
+# Binary Search algorithm => most efficient way of finding an item in an ordered list
+
+# Guessing game using Binary Search algorithm (Hi Lo Game), also calculate no. of guesses.
 low = 1
 high = 1000
 print("Please think of a number between {} and {}".format(low, high))
@@ -7,11 +8,10 @@ input("Please ENTER to start: ")
 guesses = 1
 
 while low != high:
-    # print("\tGuessing in the range of {} and {}".format(low, high))
     guess = low + (high - low) // 2
     high_low = input("My guess is {}. Should I guess higher or lower?"
                      "Enter h or l, or c if my guess was correct: "
-                     .format(guess).casefold())
+                     .format(guess))
 
     if high_low == "h":
         # Guess higher. The low end of the range becomes 1 greater than the guess

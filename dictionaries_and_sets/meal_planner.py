@@ -1,6 +1,5 @@
 from contents import pantry, recipes
 
-
 def add_shopping_item(data: dict, item_to_buy: str, item_quantity: int) -> None:
     """
     Add a tuple containing item and quantity in the shopping_list
@@ -22,13 +21,15 @@ display_dict = {str(index + 1): meal for index, meal in enumerate(recipes)}
 print(f"display_dict_loop - {display_dict_loop}")
 print(f"display_dict - {display_dict}")
 
-shopping_list = {}       # Create empty dictionary for the items to buy
+# Create empty dictionary for the items to buy
+shopping_list = {}
 
 while True:
     # Display the recipes
     print("Please choose the recipies: ")
     for key, value in display_dict.items():
         print(f"{key}: {value}")
+    print("0: To quit")
 
     choice = input("> ")
 
@@ -47,6 +48,7 @@ while True:
                 quantity_to_buy = required_qty - quantity_in_pantry
                 add_shopping_item(shopping_list, food_item, quantity_to_buy)
 
+print("Need to buy following items...")
 for item, quantity in shopping_list.items():
     print(f"{item} - {quantity}")
 

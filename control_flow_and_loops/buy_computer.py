@@ -7,11 +7,9 @@ available_parts = [
     "dvd drive",
 ]
 
-# valid_choices = [str(i) for i in range(1, len(available_parts) + 1)]
-valid_choices = []
-for i in range(1, len(available_parts) + 1):
-    valid_choices.append(str(i))
-print(valid_choices)
+valid_choices = [str(i) for i in range(1, len(available_parts) + 1)]
+print(f"valid_choices = {valid_choices}")
+
 current_choice = None
 computer_parts = []  # create an empty list
 
@@ -26,8 +24,7 @@ while current_choice != '0':
         else:
             print("Adding {}".format(current_choice))
             computer_parts.append(chosen_part)
-        print("Your list now contains: {}"
-              .format(computer_parts))
+        print("Your list now contains: {}".format(computer_parts))
     else:
         print("Please add options from the list below:")
         for number, part in enumerate(available_parts):

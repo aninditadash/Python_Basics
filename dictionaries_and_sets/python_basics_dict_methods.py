@@ -25,7 +25,11 @@ dict_keys = d.keys()
 print(dict_keys)
 
 # We also get the keys of the dictionary in below code
-# for item in d:
+for item in d:
+    print(item)
+
+print()
+
 # Below code is for getting keys explicitly
 for item in d.keys():
     print(item)
@@ -39,6 +43,7 @@ d2 = {
 }
 
 # Updating one dictionary items from another dictionary
+print("Updating one dictionary items from another dictionary")
 d.update(d2)
 for key, value in d.items():
     print(f"{key}: {value}")
@@ -46,52 +51,37 @@ for key, value in d.items():
 print("================================================================================")
 
 # Updating dictionary from other iterables like tuples
+print("Updating dictionary from other iterables like tuples")
 d.update(enumerate(pantry_items))
 for key, value in d.items():
     print(f"{key}: {value}")
 
 print("================================================================================")
 
+print("Dict methods")
 # Dictionary .values() method
 dict_values = d.values()
-print(dict_values)
+print(f"dict_values = {dict_values}")
 d[11] = 'eleven'
-print(dict_values)
+print(f"dict_values = {dict_values}")
 print("four" in dict_values)
 print("eleven" in dict_values)
 
 d_keys = list(d.keys())
 d_values = list(d.values())
+print(f"d_keys = {d_keys} \nd_values = {d_values}")
+
 # Check if value `six` exists in the dictionary and find its key in dictionary if found - using legacy methods
+# However it returns only first occurrence of 'six'
+print("Find a value in dictionary using legacy methods")
 if "six" in d_values:
     index = d_values.index("six")
     key = d_keys[index]
     print(f"{d[key]} was found at index - {index}")
 
 # Check if value `six` exists in the dictionary and find its key in dictionary if found - dict methods
+#  It returns both occurrences of 'six'
+print("Find a value in dictionary using dict methods")
 for key, value in d.items():
     if value == "six":
         print(f"{value} was found at index - {key}")
-
-print("================================================================================")
-
-# Copy method of dictionary - does a shallow copy of the dictionary, for complex datastructures e.g.
-# if values are lists, then copy() will not work.
-dict_1 = {
-    1: "one",
-    2: "two",
-    3: "three",
-    6: ["sixty", "sixty-one", "sixty-two"],
-    7: ["seventy", "seventy-one", "seventy-two"]
-}
-
-dict_2 = dict_1
-dict_1[4] = "four"
-print(f"dict_1 {dict_1} \ndict_2 {dict_2}")
-
-dict_3 = dict_1.copy()
-dict_1[5] = "five"
-dict_3[6].append("sixty-three")
-print(f"dict_1 {dict_1} \ndict_2 {dict_2} \ndict_3 {dict_3}")
-
-

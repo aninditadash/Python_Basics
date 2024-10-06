@@ -2,25 +2,31 @@
 # once they are created
 # 1) Tuples are used to protect the integrity of data.
 # 2) Tuples can be unpacked all the time, as entries cant be changed once created, so we always know
-#how many values need to be unpacked
+# how many values need to be unpacked
 
 tuple1 = "a", "b", "c"
 tuple2 = ("d", "e", "f")
 
-print(tuple1, tuple2)
-print(tuple1[0])
-print(tuple1[1])
+print(f"tuple1 = {tuple1}, tuple2 = {tuple2}")
+print(f"tuple1[0] = {tuple1[0]}")
+print(f"tuple1[1] = {tuple1[1]}")
 
 # TypeError: 'tuple' object does not support item assignment
 # tuple1[2] = "f"
 
+print("================================================================================")
+
 # Convert tuple to list
+print("Convert tuple to list")
 list1 = list(tuple1)
-print(list1)
+print(f"list(tuple1) = {list(tuple1)}")
 list1[2] = "f"
-print(list1)
+print(f"list1 = {list1}")
+
+print("================================================================================")
 
 # Unpacking a tuple
+print("Unpacking a tuple")
 x, y, z = 1, 2, 3
 print(x)
 print(y)
@@ -32,15 +38,19 @@ print(x)
 print(y)
 print(z)
 
+print("================================================================================")
+
 # Unpacking a list
+print("Unpacking a list")
 data_list = [10, 20, 30]
-# Below line mutates the list, so unpacking the list values will give error
-# ValueError: too many values to unpack (expected 3)
+# Below line mutates the list, so unpacking the list values give ValueError: too many values to unpack (expected 3)
 # data_list.append(40)
 x1, y1, z1 = data_list
 print(x1)
 print(y1)
 print(z1)
+
+print("================================================================================")
 
 # Nested tuples and lists
 nested_lists_sum = [
