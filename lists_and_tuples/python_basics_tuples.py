@@ -95,3 +95,16 @@ for recipe, ingredients in recipes_dict.items():
     print(f"To prepare - {recipe}, we need {ingredients}")
     for ingredient, quantity in ingredients.items():
         print(f"{ingredient} - {quantity}")
+
+print("================================================================================")
+
+print("Iterating over a tuple")
+ingredients_tuple = ("Chicken", "Potatoes", "Salt", "Vinegar", "Chips", "Spices")
+print(f"range_tuple = {ingredients_tuple}")
+print(f"Values in {ingredients_tuple}")
+for item in ingredients_tuple:
+    print(item)
+
+print(f"Keys and values in {ingredients_tuple}")
+for key, value in enumerate(ingredients_tuple):
+    print(f"{key}: {value}")
