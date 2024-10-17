@@ -1,3 +1,8 @@
+# Carriage return (\r)
+# => a control character that moves the cursor or print head back to the beginning of a line of text.
+# Line feed (\n)
+# => a control character that indicates the end of a line of text and the beginning of a new line.
+
 print("Welcome to Python basics")
 
 # Using escape characters like \n or """ quotes for adding " or ' in the strings

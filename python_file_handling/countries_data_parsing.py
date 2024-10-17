@@ -18,7 +18,7 @@ with open(countries_dataset) as countries_data:
             'timezone': timezone,
             'currency': currency
         }
-        # print(country_dict)
+        print(country_dict)
         countries[country.casefold()] = country_dict
         all_countries[country.casefold()] = country_dict
         # We can also make the country code as the key and assign it the country object
