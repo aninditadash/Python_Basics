@@ -41,6 +41,8 @@ with open(plants_filename_print, "r") as plants:
 
 print(f"new_plant_list \n{new_plant_list}")
 
+print("================================================================================")
+
 plants_filename_write = "../files/flowers_write.txt"
 # Approach 2 to write data to a file using write() method
 with open(plants_filename_write, "w") as plants:
